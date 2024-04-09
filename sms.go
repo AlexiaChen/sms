@@ -11,7 +11,7 @@ import (
 	"github.com/alibabacloud-go/tea/tea"
 )
 
-func createSmsClient(smsEndpoint, protocol, accessKeyId, accessKeySecret string) (_result *dysmsapi20170525.Client, _err error) {
+func CreateSmsClient(smsEndpoint, protocol, accessKeyId, accessKeySecret string) (_result *dysmsapi20170525.Client, _err error) {
 	config := &openapi.Config{
 		// 必填，您的 AccessKey ID
 		AccessKeyId: tea.String(accessKeyId),
@@ -27,7 +27,7 @@ func createSmsClient(smsEndpoint, protocol, accessKeyId, accessKeySecret string)
 	return _result, _err
 }
 
-func sendSms(client *dysmsapi20170525.Client, phoneNumber string, signName string, templateCode string, content string) (result string, _err error) {
+func SendSms(client *dysmsapi20170525.Client, phoneNumber string, signName string, templateCode string, content string) (result string, _err error) {
 
 	params := map[string]string{
 		"content": content,
