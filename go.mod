@@ -1,4 +1,4 @@
-module gitlab.landui.cn/gomod/sms
+module github.com/AlexiaChen/sms
 
 go 1.20
 
